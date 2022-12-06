@@ -7,22 +7,21 @@
                     <div class="col-lg-7">
                         <hr class="space-lg" />
                         <h3 class="text-color-2">
-                            LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM
+                            INOGEST ATAS
                         </h3>
                         <ul class="slider" data-options="arrows:false,nav:false,autoplay:3000,controls:out">
                             <li>
-                                <h1 class="text-uppercase">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1> 
+                                <h1 class="text-uppercase">Planear, organizar e gerir as suas atas de reuniões.</h1> 
                             </li>
                             <li>
-                                <h1 class="text-uppercase">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
+                                <h1 class="text-uppercase">Inogest Atas, prático e fácil.</h1>
                             </li>
-                            <li>
+                            {{-- <li>
                                 <h1 class="text-uppercase">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
-                            </li>
+                            </li> --}}
                         </ul>
                         <p>
-                            Lorem Ipsum Lorem Ipsum.  Duis aute irure dolor in reprehenderit
-                            in voluptate velit esse cillum dolore eu fugiat nulla pariature irure dolore.
+                            Inogest Atas é uma plataforma que permite gerir as atas de reuniões realizadas em uma organização, podendo rastrear as ações atribuídas.
                         </p>
                         <hr class="space-sm" />
                         <a href="{{route('register')}}" class="btn btn-sm width-190 full-width-sm">Registrar</a>
@@ -32,7 +31,7 @@
                     </div>
                     <div class="col-lg-5 hidden-md">
                         <hr class="space-sm" />
-                        <img data-anima="fade-bottom" data-time="1000" class="slide-image" src="http://via.placeholder.com/504x780" alt="" />
+                        <img data-anima="fade-bottom" data-time="1000" class="slide-image" src="storage/frontend/image1.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -45,9 +44,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-monitor-phone"></i>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum Lorem Ipsum</h2>
+                                    <h2>%99 Disponibilidade</h2>
                                     <p>
-                                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+                                        Trabalhamos para manter a nossa disponibilidade, a qualquer momento acessível.
                                     </p>
                                 </div>
                             </div>
@@ -56,9 +55,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-bar-chart2"></i>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum Lorem Ipsum</h2>
+                                    <h2>Melhor suporte</h2>
                                     <p>
-                                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+                                        Estamos sempre disponível para dar suporte em qualquer dificuldade que encontrar na plataforma
                                     </p>
                                 </div>
                             </div>
@@ -67,9 +66,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class=" im-medal"></i>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum Lorem Ipsum</h2>
+                                    <h2>Serviços de qualidade</h2>
                                     <p>
-                                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+                                        Na nossa plataforma cada ação foi desenvolvida no mínimo detalhe para que seja a melhor.
                                     </p>
                                 </div>
                             </div>
@@ -92,7 +91,7 @@
                         <ul class="slider" data-options="arrows:true,nav:false">
                             <li>
                                 <a class="img-box img-box-caption btn-video lightbox" href="https://www.youtube.com/watch?v=Lb4IcGF5iTQ" data-lightbox-anima="fade-top">
-                                    <img src="http://via.placeholder.com/800x500" alt="">
+                                    <img src="storage/frontend/image2.png" alt="">
                                     <span>Inogest Atas</span>
                                 </a>
                             </li>
@@ -105,8 +104,7 @@
                             <p>Acerca de nós</p>
                         </div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
-                            Utenim ad minim veniam quis nostrud exercitation ullamco laboris.
+                            Inogest Atas é uma plataforma que permite gerir as atas de reuniões realizadas em uma organização, podendo rastrear as ações atribuídas.
                         </p>
                         
                     </div>
@@ -118,7 +116,7 @@
                 <div class="row" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Lorem Ipsum Lorem Ipsum</h2>
+                            <h2>Inogest Atas</h2>
                             <p>Nossos serviços</p>
                         </div>
                     </div>
@@ -129,17 +127,55 @@
                     <div class="grid-box">
                         <div class="grid-item">
                             <div class="cnt-box cnt-box-info boxed" data-href="#">
-                                <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
+                                <a href="#" class="img-box"><img src="storage/frontend/1.png" alt="" /></a>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum</h2>
+                                    <h2>%99 Disponibilidade</h2>
                                    
                                     <p>
-                                        Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum.
+                                        Contamos com uma alta disponibilidade. Os erros são tratados a tempo, que não afetam a execução das suas tarefas dentro da plataforma.
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="grid-item">
+                            <div class="cnt-box cnt-box-info boxed" data-href="#">
+                                <a href="#" class="img-box"><img src="storage/frontend/3.png" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Envio de email</h2>
+                                   
+                                    <p>
+                                        A plataforma conta com o recurso de envio de email para participantes da reunião, mesmo que seja alguem que não faz parte da organização.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="cnt-box cnt-box-info boxed" data-href="#">
+                                
+                                <a href="#" class="img-box"><img src="storage/frontend/4.png" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Suporte 24h/7dias</h2>
+                                  
+                                    <p>
+                                        Contamos com um suporte da plataforma de 24h por 7 dias.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="cnt-box cnt-box-info boxed" data-href="#">
+                                <a href="#" class="img-box"><img src="storage/frontend/2.png" alt="" /></a>
+                                <div class="caption">
+                                    <h2>Painel de controle de fácil acesso</h2>
+                                
+                                    <p>
+                                        Os usuários de plataforma contam um painel de controle de fácil acesso e interpretação. Os painéis foram desenvolvidos com uma curva de aprendizado muito curta, sendo que o usuários utilize sem dificuldades.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {{-- <div class="grid-item">
                             <div class="cnt-box cnt-box-info boxed" data-href="#">
                                 <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
                                 <div class="caption">
@@ -150,57 +186,21 @@
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="cnt-box cnt-box-info boxed" data-href="#">
-                                <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
-                                <div class="caption">
-                                    <h2>Lorem Ipsum</h2>
-                                   
-                                    <p>
-                                        Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item">
-                            <div class="cnt-box cnt-box-info boxed" data-href="#">
-                                <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
-                                <div class="caption">
-                                    <h2>Lorem Ipsum</h2>
-                                
-                                    <p>
-                                        Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> --}}
                         <div class="grid-item">
                             <div class="cnt-box cnt-box-info boxed" data-href="#">
                                
-                                <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
+                                <a href="#" class="img-box"><img src="storage/frontend/5.png" alt="" /></a>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum</h2>
+                                    <h2>Rastreamento de tarefas</h2>
                                    
                                     <p>
-                                        Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum.
+                                        É possivel o rastreamento de todas tarefas deixadas em uma reunião e assim acompanhar a execução desta tarefa. São emitidos alertas inteligentes para cada uma das tarefas, desde o inicio até quando está prestes a expirar.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid-item">
-                            <div class="cnt-box cnt-box-info boxed" data-href="#">
-                                
-                                <a href="#" class="img-box"><img src="http://via.placeholder.com/800x500" alt="" /></a>
-                                <div class="caption">
-                                    <h2>Lorem Ipsum</h2>
-                                  
-                                    <p>
-                                        Excepteur sint occaecat cupidatat non proidento in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -211,50 +211,43 @@
                 <div class="row align-items-center" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Lorem Ipsum Lorem Ipsum</h2>
-                            <p>Lorem Ipsum Lorem Ipsum</p>
+                            <h2>Inogest Atas</h2>
+                            <p>Mantenha as tarefas organizadas</p>
                         </div>
                         <p>
-                            Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
-                            Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum.
+                            Seja planejando uma reunião, o Inogest Atas ajuda você a se manter organizado e cumprir prazos 5 vezes mais rápido com o gerenciamento de tarefas.
                         </p>
                         <hr class="space-sm" />
                         <ul class="accordion-list">
                             <li>
-                                <a href="#">Lorem Ipsum Lorem Ipsum</a>
+                                <a href="#">Organização de tarefas por departamentos</a>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
-                                        Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                       Cada departamente tem uma visão geral das tarefas existentes e prazos das mesmas, podendo gerenciar as tarefas.
                                     </p>
                                 </div>
                             </li>
 
                             <li>
-                                <a href="#">Lorem Ipsum Lorem Ipsum</a>
+                                <a href="#">Notficações de tarefas</a>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
-                                        Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                       Quando as tarefas estão prestes a expirar, são emitidas alertas para que seja cumprida a prazo.
                                     </p>
                                 </div>
                             </li>
                             <li>
-                                <a href="#">Lorem Ipsum Lorem Ipsum</a>
+                                <a href="#">Visão geral em calendário</a>
                                 <div class="content">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua.
-                                        Utenim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        Uma visão em calendário é fornecida para poder se gerenciar todas tarefas atribuídas, assim o gestor tem a noção dos prazos para o cumprimento da tarefa.
                                     </p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
-                        <img src="http://via.placeholder.com/590x364" alt="" />
+                        <img src="storage/frontend/image3.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -346,15 +339,15 @@
                         <div class="title">
                             <h2>Serviços adicionais</h2>
                             <p>Nos contacte para informações</p>
-                        </div>  <p class="text-color-1">
+                        {{-- </div>  <p class="text-color-1">
                             Placeat orci commo sciunt habitasse dcita  iusto, voluptas, numese ante.
-                        </p>
+                        </p> --}}
                         <a href="{{route('contacts')}}" class="btn-text active">Contactos</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-base section-color">
+        {{-- <section class="section-base section-color">
             <div class="container">
                 <div class="row" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-12">
@@ -400,7 +393,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         
     
 @endsection

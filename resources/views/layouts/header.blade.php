@@ -23,10 +23,10 @@
         <div class="container">
             <div class="menu-brand">
                 <a href="/">
-                    <img class="logo-default scroll-hide" src="{{asset('template3/media/logo.svg')}}" alt="logo" />
-                    <img class="logo-retina scroll-hide" src="{{asset('template3/media/logo.svg')}}" alt="logo" />
-                    <img class="logo-default scroll-show" src="{{asset('template3/media/logo.svg')}}" alt="logo" />
-                    <img class="logo-retina scroll-show" src="{{asset('template3/media/logo.svg')}}" alt="logo" />
+                    <img class="logo-default scroll-hide" src="storage/sys/logo.svg" alt="logo" />
+                    <img class="logo-retina scroll-hide" src="storage/sys/logo.svg" alt="logo" />
+                    <img class="logo-default scroll-show" src="storage/sys/logo.svg" alt="logo" />
+                    <img class="logo-retina scroll-show" src="storage/sys/logo.svg" alt="logo" />
                 </a>
             </div>
             <i class="menu-btn"></i>

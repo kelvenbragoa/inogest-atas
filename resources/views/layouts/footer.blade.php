@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <h3>Inogest-Atas</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p> 
+                <p>Uma plataforma para sua equipe.</p> 
                 <div class="icon-links icon-social icon-links-grid social-colors">
                     <a class="facebook"><i class="icon-facebook"></i></a>
                     <a class="instagram"><i class="icon-instagram"></i></a>

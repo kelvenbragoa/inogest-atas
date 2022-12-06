@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Department;
 use App\Models\Employee;
-use App\Models\invoice;
+use App\Models\Invoice;
 use App\Models\Meeting;
 use App\Models\MeetingTask;
 use App\Models\Ticket;
@@ -50,7 +50,7 @@ class HomeController extends Controller
             $type_meetings = TypeMeeting::where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
             $meetings = Meeting::where('organization_id',Auth::user()->organization_id)->get();
             $tickets = Ticket::where('user_id',Auth::user()->id)->where('status',1)->get();
-            $invoice = invoice::where('organization_id',Auth::user()->organization_id)->where('status',0)->get();
+            $invoice = Invoice::where('organization_id',Auth::user()->organization_id)->where('status',0)->get();
             $tasks = MeetingTask::where('organization_id',Auth::user()->organization_id)->orderBy('id','desc')->limit(10)->get();
             $data_bar = [];
             $task_done = [];

@@ -7,6 +7,7 @@ use App\Models\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class TicketsController extends Controller
 {
@@ -48,14 +49,28 @@ class TicketsController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $data = $request->all();
+       
+        if(request('file')){
+            $imagePath = request('file')->store('ticket','public');
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(500,500);
+            $image->save();
+            $imageArray = ['file'=> $imagePath ];
+        }
         $request->validate([
             'type_ticket_id' => ['required'],
             'priority' => ['required'],
             'subject' => ['required'],
             'message' => ['required'],
+            'file' => ['max:500|mimes:jpeg,png,jpg,gif'],
         ]);
 
-        Ticket::create($data);
+
+        Ticket::create( array_merge(
+            $data,
+            $imageArray ?? []
+        ));
+
+       
 
         return redirect()->route('tickets.index')->with('messageSuccess', 'Ticket criado com sucesso'); 
     }

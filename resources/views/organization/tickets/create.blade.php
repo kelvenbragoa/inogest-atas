@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                     @endif
-                    <form method="POST" id="form" action="{{route('tickets.store')}}">
+                    <form method="POST" id="form" action="{{route('tickets.store')}}" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="mb-3 col-md-6">
@@ -88,6 +88,16 @@
                             </div>
                     
                         </div>
+                        <div class="row">
+
+                            <div class="mb-3 col-md-6">
+                                <label class="form-label" for="inputEmail4">{{__('text.image')}}</label>
+                                <input class="btn btn-primary" type="file" name="file" id="">
+                            </div>
+                    
+                        </div>
+
+                       
 
                         <div class="row">
                             <div class="mb-3 col-md-12">

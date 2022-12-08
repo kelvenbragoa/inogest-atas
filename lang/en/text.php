@@ -1,6 +1,7 @@
 <?php
 
 return[
+    'image'=>'Image',
     'after_creating_employee'=>'After creating the employee, the credentials for this employee is his email address.',
     'how_to_manager_department'=>'To add the department manager for a department, edit the department and select the employee you want.',
     'payment_gateway'=>'Payment gateway fee(Mpesa)',

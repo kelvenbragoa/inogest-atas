@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 @endif
-                    <form action="{{ route('manager-meeting.update', $meeting->id)}}" method="POST">
+                    <form action="{{ route('manager-meeting.update', $meeting->id)}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
                      
@@ -69,6 +69,50 @@
                             </div>
                             
                         </div>
+
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label class="form-label" for="inputEmail4">{{__('text.attachment')}}</label>
+                                <input type="file" class="form-control" name="attachment[]" multiple id="attachment" placeholder="" >
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>{{__('text.attachment')}}</p>
+                                    <div class="row">
+                                        @if ($meeting->attachments->count() == 0)
+                                            <p>Nenhum anexo</p>
+                                        @else
+                                            <p>{{$meeting->attachments->count()}} anexos</p>
+
+                                            @foreach ($meeting->attachments as $item)
+                                            <div class="col-sm-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <div class="text-center">
+                                                            <i class="align-middle" data-feather="file" style="width: 20px;  height: 20px;"></i><a href="/storage/{{$item->attachment}}" target="_blank">Ver anexo</a> <br>
+                                                            <form action="{{ route('manager-attachment.destroy', $item->id)}}" method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit"><i class="align-middle" data-feather="trash" style="width: 20px;  height: 20px;"></i>Apagar</button>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endforeach
+                                           
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <div class="row">
                             <div class="mb-3 col-md-12">

@@ -29,6 +29,21 @@
                         </div>
                     </div>
                     @endif
+                    @if ($errors->any())
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+                                <div class="alert-icon">
+                                    <i class="far fa-fw fa-bell"></i>
+                                </div>
+                                <div class="alert-message">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                    @endif
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -50,6 +65,40 @@
                     </div>
                  
                    </div>
+                   <hr>
+                   <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>{{__('text.attachment')}}</p>
+                            <div class="row">
+                                @if ($meeting->attachments->count() == 0)
+                                    <p>Nenhum anexo</p>
+                                @else
+                                    <p>{{$meeting->attachments->count()}} anexos</p>
+
+                                    @foreach ($meeting->attachments as $item)
+                                    <div class="col-sm-2">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <i class="align-middle" data-feather="file" style="width: 20px;  height: 20px;"></i><a href="/storage/{{$item->attachment}}" target="_blank">Ver anexo</a> <br>
+                                                    <form action="{{ route('manager-attachment.destroy', $item->id)}}" method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"><i class="align-middle" data-feather="trash" style="width: 20px;  height: 20px;"></i>Apagar</button>
+                                                    </form>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                   
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
                    <hr>
                    <div class="row mb-2 mb-xl-3">
                     <div class="col-auto d-none d-sm-block">

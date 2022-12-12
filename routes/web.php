@@ -56,6 +56,7 @@ Route::group(['middleware'=>['auth','organization','active']], function(){
 
 Route::group(['middleware'=>['auth','manager','active']], function(){
     Route::resource('manager-tickets', 'App\Http\Controllers\Manager\TicketsController');
+    Route::resource('manager-attachment', 'App\Http\Controllers\Manager\MeetingAttachmentController');
     Route::resource('manager-configuration', 'App\Http\Controllers\Manager\ConfigurationController');
     Route::resource('manager-employee', 'App\Http\Controllers\Manager\EmployeeController');
     Route::resource('manager-meeting', 'App\Http\Controllers\Manager\MeetingController');

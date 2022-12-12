@@ -50,6 +50,12 @@ class MeetingTaskController extends Controller
 
         $participant = MeetingParticipant::find($data['meeting_participant_id']);
 
+        $request->validate([
+            'meeting_participant_id' => ['required'],
+            'what' => ['required'],
+            'when' => ['required'],
+      
+        ]);
         MeetingTask::create([
             'meeting_id'=>$data['meeting_id'],
             'organization_id'=>$participant->organization_id,

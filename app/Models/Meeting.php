@@ -33,4 +33,8 @@ class Meeting extends Model
     public function comments(){
         return $this->hasMany('App\Models\Comments', 'meeting_id', 'id')->orderby('id','desc');
     }
+
+    public function attachments(){
+        return $this->hasMany('App\Models\MeetingAttachment', 'meeting_id', 'id');
+    }
 }

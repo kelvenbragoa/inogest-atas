@@ -1,6 +1,7 @@
 <?php
 
 return[
+    'attachment' => 'Anexo',
     'image'=>'Imagem',
     'after_creating_employee'=>'Após a criação do funcionário, as credenciais para este funcionário são o seu endereço de email.',
     'how_to_manager_department'=>'Para adicionar o gestor de departamento para um departamento, edite o departamente e selecione o funcionário que deseja.',

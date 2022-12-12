@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Comments;
 use App\Models\Department;
 use App\Models\Meeting;
+use App\Models\MeetingAttachment;
 use App\Models\MeetingParticipant;
 use App\Models\MeetingTask;
 use App\Models\TypeMeeting;
@@ -124,9 +125,46 @@ class MeetingController extends Controller
         //
         $data= $request->all();
 
-        $meeting = Meeting::find($id);
+        $files = $request->file('attachment');
 
-        $meeting->update($data);
+       
+
+        $meeting = Meeting::find($id);
+        $allowedfileExtension=['pdf'];
+
+        if($request->has('attachment')){
+            foreach($files as $file){
+                $filename = $file->getClientOriginalName();
+                $extension = $file->getClientOriginalExtension();
+                $check=in_array($extension,$allowedfileExtension);
+                $imagePath = $file->store('meeting-attachment','public');
+                $imageArray = ['image'=> $imagePath ];
+
+                if($check){
+                    MeetingAttachment::create([
+
+                        'attachment' => $imagePath,
+                        'meeting_id' => $meeting->id,
+    
+                    ]);
+                }else{
+                    return redirect()->route('manager-meeting.index')->with('messageError', 'Erro ao carregar o anexo. Apenas permitido arquivo .pdf');
+                }
+                
+               
+
+            }
+        }
+
+        $meeting->update([
+            'date'=>$data['date'],
+            'subject'=>$data['subject'],
+            'body'=>$data['body'],
+            'start_time'=>$data['start_time'],
+            'end_time'=>$data['end_time'],
+
+
+        ]);
 
         return redirect()->route('manager-meeting.index')->with('messageSuccess', 'Acta da Reunião editada com sucesso');
     }

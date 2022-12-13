@@ -73,7 +73,7 @@
                         <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label class="form-label" for="inputEmail4">{{__('text.attachment')}}</label>
-                                <input type="file" class="form-control" name="attachment[]" multiple id="attachment" placeholder="" >
+                                <input type="file" class="form-control" name="attachment[]" accept=".pdf" multiple id="attachment" placeholder="" >
                             </div>
                             
                         </div>

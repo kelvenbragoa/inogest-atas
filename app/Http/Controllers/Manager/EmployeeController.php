@@ -115,6 +115,7 @@ class EmployeeController extends Controller
     {
         //
         $employee = Employee::find($id);
+        $this->authorize('view',$employee);
         $task_done = MeetingTask::where('employee_id',$id)->where('status',1)->get();
         $task_not_done = MeetingTask::where('employee_id',$id)->where('status',0)->get();
 
@@ -131,6 +132,7 @@ class EmployeeController extends Controller
     {
         //
         $employee = Employee::find($id);
+        $this->authorize('update',$employee);
         $departments = Department::where('organization_id',Auth::user()->organization_id)->where('id',Auth::user()->department_id)->orderBy('name','asc')->get();
         return view('manager.employee.edit', compact('employee','departments'));
     }
@@ -147,6 +149,7 @@ class EmployeeController extends Controller
         //
         $data = $request->all();
         $employee = Employee::find($id);
+        $this->authorize('update',$employee);
 
         $employee->update($data);
         return redirect()->route('manager-employee.index')->with('messageSuccess', 'Funcionário editado com sucesso');

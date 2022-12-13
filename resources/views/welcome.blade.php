@@ -7,21 +7,23 @@
                     <div class="col-lg-7">
                         <hr class="space-lg" />
                         <h3 class="text-color-2">
-                            INOGEST ATAS
+                            InoGest ATAS
                         </h3>
                         <ul class="slider" data-options="arrows:false,nav:false,autoplay:3000,controls:out">
                             <li>
-                                <h1 class="text-uppercase">Planear, organizar e gerir as suas atas de reuniões.</h1> 
+                                <h1 class="text-uppercase">IMPULSIONAR O PLANEAMENTO, ORGANIZAÇÃO E GESTÃO DAS DECISÕES TOMADAS EM REUNIÕES.</h1> 
                             </li>
                             <li>
-                                <h1 class="text-uppercase">Inogest Atas, prático e fácil.</h1>
+                                <h1 class="text-uppercase">INOVADOR, FÁCIL E PRÁTICO.
+                                </h1>
                             </li>
                             {{-- <li>
                                 <h1 class="text-uppercase">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</h1>
                             </li> --}}
                         </ul>
                         <p>
-                            Inogest Atas é uma plataforma que permite gerir as atas de reuniões realizadas em uma organização, podendo rastrear as ações atribuídas.
+                            InoGest Atas a plataforma que aumenta a produtividade da sua gestão.
+.
                         </p>
                         <hr class="space-sm" />
                         <a href="{{route('register')}}" class="btn btn-sm width-190 full-width-sm">Registrar</a>
@@ -44,9 +46,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-monitor-phone"></i>
                                 <div class="caption">
-                                    <h2>%99 Disponibilidade</h2>
+                                    <h2>ESTRUTURA ORGANIZACIONAL</h2>
                                     <p>
-                                        Trabalhamos para manter a nossa disponibilidade, a qualquer momento acessível.
+                                        Organize o InoGest ATAs com a mesma estrutura da sua empresa. Crie seus departamentos, cadastre funcionários e monitore suas ações de forma eficiente.
                                     </p>
                                 </div>
                             </div>
@@ -55,9 +57,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-bar-chart2"></i>
                                 <div class="caption">
-                                    <h2>Melhor suporte</h2>
+                                    <h2>TIPOS DE REUNIÕES</h2>
                                     <p>
-                                        Estamos sempre disponível para dar suporte em qualquer dificuldade que encontrar na plataforma
+                                        A produtividade esta diretamente ligado ao modelo de gestão, sendo necessário definir, estrategicamente tipos de reuniões e sua periodicidade.
                                     </p>
                                 </div>
                             </div>
@@ -66,9 +68,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class=" im-medal"></i>
                                 <div class="caption">
-                                    <h2>Serviços de qualidade</h2>
+                                    <h2>PAINEL DE INDICADORES </h2>
                                     <p>
-                                        Na nossa plataforma cada ação foi desenvolvida no mínimo detalhe para que seja a melhor.
+                                        InoGest ATAs desenhado para simplificar a gestão, conta com um painel de indicadores, resumindo o resultado da organização
                                     </p>
                                 </div>
                             </div>
@@ -77,9 +79,9 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-business-man"></i>
                                 <div class="caption">
-                                    <h2>Lorem Ipsum Lorem Ipsum</h2>
+                                    <h2>Ações e Alertas</h2>
                                     <p>
-                                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
+                                        InoGest ATAs, permite um monitoramento dinâmico das decisões tomadas em cada reunião. As decisões transforma-se em ações com datas de execução, os   alertas sistemáticos por email garantem um monitoramento integrado.
                                     </p>
                                 </div>
                             </div>
@@ -92,7 +94,7 @@
                             <li>
                                 <a class="img-box img-box-caption btn-video lightbox" href="https://www.youtube.com/watch?v=Lb4IcGF5iTQ" data-lightbox-anima="fade-top">
                                     <img src="storage/frontend/image2.png" alt="">
-                                    <span>Inogest Atas</span>
+                                    <span>InoGest Atas</span>
                                 </a>
                             </li>
                            
@@ -100,11 +102,11 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Nossa missão e visão</h2>
+                            <h2>InoGest Atas</h2>
                             <p>Acerca de nós</p>
                         </div>
                         <p>
-                            Inogest Atas é uma plataforma que permite gerir as atas de reuniões realizadas em uma organização, podendo rastrear as ações atribuídas.
+                            A forma inteligente de gerir tomadas de decisão.
                         </p>
                         
                     </div>
@@ -116,7 +118,7 @@
                 <div class="row" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Inogest Atas</h2>
+                            <h2>InoGest Atas</h2>
                             <p>Nossos serviços</p>
                         </div>
                     </div>
@@ -211,11 +213,11 @@
                 <div class="row align-items-center" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-6">
                         <div class="title">
-                            <h2>Inogest Atas</h2>
+                            <h2>InoGest Atas</h2>
                             <p>Mantenha as tarefas organizadas</p>
                         </div>
                         <p>
-                            Seja planejando uma reunião, o Inogest Atas ajuda você a se manter organizado e cumprir prazos 5 vezes mais rápido com o gerenciamento de tarefas.
+                            Seja planejando uma reunião, o InoGest Atas ajuda você a se manter organizado e cumprir prazos 5 vezes mais rápido com o gerenciamento de tarefas.
                         </p>
                         <hr class="space-sm" />
                         <ul class="accordion-list">
@@ -259,7 +261,7 @@
                         <div class="cnt-box cnt-pricing-table">
                             <div class="top-area">
                                 <h2>Báscio</h2>
-                                <div class="price"><span>Grátis</span></div>
+                                <div class="price"><span style="font-size:30px">Grátis</span></div>
                                 <p>Máximo 3 usuários</p>
                             </div>
                             <ul>
@@ -275,11 +277,11 @@
                         <div class="cnt-box cnt-pricing-table pricing-table-big">
                             <div class="top-area">
                                 <h2>Organização</h2>
-                                <div class="price"><span>400 MT</span></div>
+                                <div class="price"><span style="font-size:30px">250 MT</span></div>
                                 <p>Por usuário</p>
                             </div>
                             <ul>
-                                <li>Neste pacote pode adicionar quantos funcionários forem necessário na plataforma, sendo cobrado o preço de 400 MT por funcionário.</li>
+                                <li>Neste pacote pode adicionar quantos funcionários forem necessário na plataforma, sendo cobrado o preço de 250 MT por funcionário.</li>
                                 
                             </ul>
                             <div class="bottom-area">
@@ -290,8 +292,8 @@
                     <div class="col-lg-4 anima">
                         <div class="cnt-box cnt-pricing-table">
                             <div class="top-area">
-                                <h2>Persnolizado</h2>
-                                <div class="price"><span>Contactar</span></div>
+                                <h2>Personalizado</h2>
+                                <div class="price"><span style="font-size:30px">Contactar</span></div>
                                 <p>Linha de apoio</p>
                             </div>
                             <ul>
@@ -307,7 +309,7 @@
               
             </div>
         </section>
-        <section class="section-base">
+        {{--<section class="section-base">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -339,15 +341,13 @@
                         <div class="title">
                             <h2>Serviços adicionais</h2>
                             <p>Nos contacte para informações</p>
-                        {{-- </div>  <p class="text-color-1">
-                            Placeat orci commo sciunt habitasse dcita  iusto, voluptas, numese ante.
-                        </p> --}}
+                       
                         <a href="{{route('contacts')}}" class="btn-text active">Contactos</a>
                     </div>
                 </div>
             </div>
         </section>
-        {{-- <section class="section-base section-color">
+         <section class="section-base section-color">
             <div class="container">
                 <div class="row" data-anima="fade-bottom" data-time="1000">
                     <div class="col-lg-12">

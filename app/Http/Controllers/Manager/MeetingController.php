@@ -24,6 +24,8 @@ class MeetingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+   
     public function index()
     {
         //
@@ -88,8 +90,11 @@ class MeetingController extends Controller
     public function show($id)
     {
         //
+        
         App::setLocale(auth()->user()->lang);
         $meeting = Meeting::find($id);
+        $this->authorize('view',$meeting);
+        
         $participants = User::where('department_id',Auth::user()->department_id)->where('organization_id',Auth::user()->organization_id)->where('role_id',4)->orderBy('name','asc')->get();
         $departments = Department::where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
 
@@ -108,7 +113,7 @@ class MeetingController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $meeting = Meeting::find($id);
-
+        $this->authorize('view',$meeting);
 
         return view('manager.meeting.edit',compact('meeting'));
     }
@@ -130,6 +135,7 @@ class MeetingController extends Controller
        
 
         $meeting = Meeting::find($id);
+        $this->authorize('view',$meeting);
         $allowedfileExtension=['pdf'];
 
         if($request->has('attachment')){

@@ -297,12 +297,13 @@
                                 <p>Linha de apoio</p>
                             </div>
                             <ul>
-                                <li>Nos contacte e encomende um serviço profissional e personalizado para sua organização.</li>
-                               
+                                <li>Nos contacte e encomende um serviço personalizado para sua organização.</li>
                             </ul>
+
                             <div class="bottom-area">
                                 <a class="btn btn-border btn-xs" href="{{route('contacts')}}">Contactos</a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

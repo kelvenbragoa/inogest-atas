@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('template3/themekit/css/contact-form.css')}}">
     <link rel="stylesheet" href="{{asset('template3/themekit/css/media-box.css')}}">
     <link rel="stylesheet" href="{{asset('template3/skin.css')}}">
-    <link rel="icon" href="{{asset('template3/media/favicon.png')}}">
+    <link rel="icon" href="storage/img/sys/logoinogesticon.png">
 </head>
 <body>
     <div id="preloader"></div>
@@ -48,6 +48,7 @@
                     </li>
                 </ul>
                 <div class="menu-right">
+                    
                     <div class="custom-area">
                         2100 <br>
                         África, Moçambique

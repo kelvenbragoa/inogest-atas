@@ -70,7 +70,7 @@
                                 <div class="caption">
                                     <h2>PAINEL DE INDICADORES </h2>
                                     <p>
-                                        InoGest ATAs desenhado para simplificar a gestão, conta com um painel de indicadores, resumindo o resultado da organização
+                                        InoGest Atas desenhado para simplificar a gestão, conta com um painel de indicadores, resumindo o resultado da organização
                                     </p>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-business-man"></i>
                                 <div class="caption">
-                                    <h2>Ações e Alertas</h2>
+                                    <h2>AÇÕES E ALERTAS</h2>
                                     <p>
                                         InoGest ATAs, permite um monitoramento dinâmico das decisões tomadas em cada reunião. As decisões transforma-se em ações com datas de execução, os   alertas sistemáticos por email garantem um monitoramento integrado.
                                     </p>
@@ -103,7 +103,7 @@
                     <div class="col-lg-6">
                         <div class="title">
                             <h2>InoGest Atas</h2>
-                            <p>Acerca de nós</p>
+                           
                         </div>
                         <p>
                             A forma inteligente de gerir tomadas de decisão.
@@ -303,7 +303,7 @@
                             <div class="bottom-area">
                                 <a class="btn btn-border btn-xs" href="{{route('contacts')}}">Contactos</a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

@@ -46,7 +46,7 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-monitor-phone"></i>
                                 <div class="caption">
-                                    <h2>ESTRUTURA ORGANIZACIONAL</h2>
+                                    <h2 style="text-align: center">ESTRUTURA ORGANIZACIONAL</h2>
                                     <p>
                                         Organize o InoGest ATAs com a mesma estrutura da sua empresa. Crie seus departamentos, cadastre funcionários e monitore suas ações de forma eficiente.
                                     </p>
@@ -57,7 +57,7 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-bar-chart2"></i>
                                 <div class="caption">
-                                    <h2>TIPOS DE REUNIÕES</h2>
+                                    <h2 style="text-align: center">TIPOS DE REUNIÕES</h2>
                                     <p>
                                         A produtividade esta diretamente ligado ao modelo de gestão, sendo necessário definir, estrategicamente tipos de reuniões e sua periodicidade.
                                     </p>
@@ -68,7 +68,7 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class=" im-medal"></i>
                                 <div class="caption">
-                                    <h2>PAINEL DE INDICADORES </h2>
+                                    <h2 style="text-align: center">PAINEL DE INDICADORES </h2>
                                     <p>
                                         InoGest Atas desenhado para simplificar a gestão, conta com um painel de indicadores, resumindo o resultado da organização
                                     </p>
@@ -79,7 +79,7 @@
                             <div class="cnt-box cnt-box-top-icon boxed">
                                 <i class="im-business-man"></i>
                                 <div class="caption">
-                                    <h2>AÇÕES E ALERTAS</h2>
+                                    <h2 style="text-align: center">AÇÕES E ALERTAS</h2>
                                     <p>
                                         InoGest ATAs, permite um monitoramento dinâmico das decisões tomadas em cada reunião. As decisões transforma-se em ações com datas de execução, os   alertas sistemáticos por email garantem um monitoramento integrado.
                                     </p>
@@ -259,8 +259,8 @@
                 <div class="row" data-anima="fade-bottom" data-timeline="asc" data-time="2000">
                     <div class="col-lg-4 anima">
                         <div class="cnt-box cnt-pricing-table">
-                            <div class="top-area">
-                                <h2>Báscio</h2>
+                            <div class="top-area" style="text-align: center">
+                                <h2>Básico</h2>
                                 <div class="price"><span style="font-size:30px">Grátis</span></div>
                                 <p>Máximo 3 usuários</p>
                             </div>
@@ -275,7 +275,7 @@
                     </div>
                     <div class="col-lg-4 anima">
                         <div class="cnt-box cnt-pricing-table pricing-table-big">
-                            <div class="top-area">
+                            <div class="top-area" style="text-align: center">
                                 <h2>Organização</h2>
                                 <div class="price"><span style="font-size:30px">250 MT</span></div>
                                 <p>Por usuário</p>
@@ -291,7 +291,7 @@
                     </div>
                     <div class="col-lg-4 anima">
                         <div class="cnt-box cnt-pricing-table">
-                            <div class="top-area">
+                            <div class="top-area" style="text-align: center">
                                 <h2>Personalizado</h2>
                                 <div class="price"><span style="font-size:30px">Contactar</span></div>
                                 <p>Linha de apoio</p>

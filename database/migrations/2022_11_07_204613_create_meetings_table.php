@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('date');
             $table->time('start_time');
             $table->time('end_time');
+            $table->bigInteger('type_meeting_id');
             $table->bigInteger('organization_id');
             $table->bigInteger('department_id');
             $table->bigInteger('created_by_user_id');

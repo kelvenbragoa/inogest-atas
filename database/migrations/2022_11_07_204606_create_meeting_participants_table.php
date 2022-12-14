@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('obs')->nullable();
             $table->bigInteger('email_status');
+            $table->bigInteger('source');
             $table->timestamps();
         });
     }

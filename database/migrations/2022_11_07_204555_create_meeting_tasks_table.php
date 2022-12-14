@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('meeting_tasks', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('meeting_id');
-            $table->bigInteger('organization_id');
-            $table->bigInteger('department_id');
+            $table->bigInteger('organization_id')->nullable();
+            $table->bigInteger('department_id')->nullable();
             $table->bigInteger('meeting_participant_id');
+            $table->bigInteger('employee_id')->nullable();
             $table->text('what');
             $table->date('when');
             $table->bigInteger('status');

@@ -19,9 +19,9 @@ return new class extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('organization_id');
             $table->bigInteger('priority');
-            $table->text('subject');
-            $table->text('message');
-            $table->text('file');
+            $table->text('subject')->nullable();
+            $table->text('message')->nullable();
+            $table->text('file')->nullable();
             $table->bigInteger('status');
             $table->timestamps();
         });

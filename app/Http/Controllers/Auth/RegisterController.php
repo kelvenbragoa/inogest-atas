@@ -79,6 +79,7 @@ class RegisterController extends Controller
             'role_id' => 2,
             'is_active' => 1,
             'is_deleted' => 0,
+            'full_access' => 1,
             'lang' => 'en',
             'organization_id' => $organization->id,
             'password' => Hash::make($data['password']),

@@ -109,10 +109,10 @@ class OtherMeetingController extends Controller
     public function edit($id)
     {
         //
-        $meeting = Meeting::find($id);
+        // $meeting = Meeting::find($id);
 
 
-        return view('employee.othermeeting.edit',compact('meeting'));
+        // return view('employee.othermeeting.edit',compact('meeting'));
     }
 
     /**

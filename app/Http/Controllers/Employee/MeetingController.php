@@ -76,6 +76,9 @@ class MeetingController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $meeting = Meeting::find($id);
+
+        $this->authorize('view',$meeting);
+        
         $participants = User::where('department_id',Auth::user()->department_id)->where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
         $departments = Department::where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
 
@@ -105,10 +108,12 @@ class MeetingController extends Controller
     public function edit($id)
     {
         //
-        App::setLocale(auth()->user()->lang);
-        $meeting = Meeting::find($id);
+        // App::setLocale(auth()->user()->lang);
+        // $meeting = Meeting::find($id);
 
-        return view('employee.meeting.edit',compact('meeting'));
+        // return view('employee.meeting.edit',compact('meeting'));
+
+       
 
     }
 

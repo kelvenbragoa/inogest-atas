@@ -1,114 +1,37 @@
 <?php
 
-namespace App\Http\Controllers\Organization;
+namespace App\Console\Commands;
 
-use App\Http\Controllers\Controller;
 use App\Models\Invoice;
 use App\Models\Organization;
-use App\Models\Transaction;
 use App\Models\User;
 use App\Notifications\Operation;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Notification;
 
-class InvoiceController extends Controller
+class GenerateInvoice extends Command
 {
-
-    public function __construct(){
-        $this->middleware('auth');
-        $this->middleware('organization');
-        
-    }
     /**
-     * Display a listing of the resource.
+     * The name and signature of the console command.
      *
-     * @return \Illuminate\Http\Response
+     * @var string
      */
-    public function index()
-    {
-        //
-        App::setLocale(auth()->user()->lang);
-        $invoice = Invoice::orderBy('id','desc')->where('organization_id',Auth::user()->organization_id)->get();
-        return view('organization.invoice.index', compact('invoice'));
-    }
+    protected $signature = 'daily:update';
 
     /**
-     * Show the form for creating a new resource.
+     * The console command description.
      *
-     * @return \Illuminate\Http\Response
+     * @var string
      */
-    public function create()
-    {
-        //
-    }
+    protected $description = 'Generate Invoices for users ';
 
     /**
-     * Store a newly created resource in storage.
+     * Execute the console command.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return int
      */
-    public function store(Request $request)
+    public function handle()
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-        App::setLocale(auth()->user()->lang);
-        $invoice = Invoice::find($id);
-
-        $this->authorize('view',$invoice);
-
-        return view('organization.invoice.show',compact('invoice'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-
-    public function generate(){
-
         //obtem lista de todas organizações
         $organizations = Organization::orderBy('id','asc')->get();
         
@@ -215,121 +138,6 @@ class InvoiceController extends Controller
                                     }
                     }
         }
-    }
-
-
-
-    public function mpesapayment(Request $request){
-        $data = $request->all();
-        $request->validate([
-            'number' => ['required','numeric'],
-           
-        ]);
-        $string = substr(str_shuffle(str_repeat($x='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(3/strlen($x)) )),1,3);
-        $invoice = Invoice::find($data['invoice_id']);
-        $organization = Organization::find($invoice->organization_id);
-        $ref = 'INA'.$invoice->id.$string;
-        $reference = $ref;
-        $third_party_reference = $ref;
-        $amount = $invoice->amount + $invoice->amount*0.04;
-        $msisdn = $data['number'];
-
-        $config = \abdulmueid\mpesa\Config::loadFromFile('config.php');
-        $transactionmpesa = new \abdulmueid\mpesa\Transaction($config);
-
-        $c2b = $transactionmpesa->c2b(
-            1,//$amount,
-            
-            $msisdn,
-            $reference,
-            $third_party_reference
-        );
-
-        if($c2b->getCode() === 'INS-0') {
-
-            Transaction::create([
-                'reference' => $reference,
-                'amount' => $amount,
-                'invoice_id' => $data['invoice_id'],
-                'method' => 'Mpesa-'.$msisdn,
-                'organization_id' => $data['organization_id'],
-    
-    
-            ]);
-
-            $invoice->update([
-                'status'=>1
-            ]);
-
-            $organization->update([
-                'is_active'=>1
-            ]);
-
-            return back()->with('messageSucess','A sua fatura foi paga com sucesso');
-        }
-
-        if($c2b->getCode() === 'INS-1') {
-
-            return back()->with('messageError', 'Erro interno, volte a tentar novamente');
-
-        }
-
-        if($c2b->getCode() === 'INS-2') {
-            //API INVALIDA
-            return back()->with('messageError', 'Erro interno, volte a tentar novamente');
-
-        }
-
-        if($c2b->getCode() === 'INS-4') {
-            //API INVALIDA, USUARIO NAO ATIVO
-            return back()->with('messageError', 'Erro interno, volte a tentar novamente');
-
-        }
-
-        if($c2b->getCode() === 'INS-5') {
-            //API INVALIDA, USUARIO CANCELOU
-            return back()->with('messageError', 'Transação cancelado pelo usuário');
-
-        }
-
-        if($c2b->getCode() === 'INS-6') {
-            //API INVALIDA, Transaçãp falhou
-            return back()->with('messageError', 'Transação falhou');
-
-        }
-
-        if($c2b->getCode() === 'INS-9') {
-            //API INVALIDA, REQUEST TIMEOUT
-            return back()->with('messageError', 'O tempo expirou. Volte a tentar');
-
-        }
-
-        if($c2b->getCode() === 'INS-10') {
-        
-            return back()->with('messageError', 'Transação duplicada');
-
-        }
-        if($c2b->getCode() === 'INS-16') {
-        
-            return back()->with('messageError', 'Erro interno volte mais tarde');
-
-        }
-
-        if($c2b->getCode() === 'INS-2006') {
-        
-            return back()->with('messageError', 'Saldo insuficiente');
-
-        }
-
-        if($c2b->getCode() === 'INS-2051') {
-        
-            return back()->with('messageError', 'Número de telefone inválido');
-
-        }
-
-
-
-
-        
+        return Command::SUCCESS;
     }
 }

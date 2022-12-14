@@ -1,6 +1,11 @@
 <?php
 
 return[
+    'how_to_create_department'=>'How to create a department for your organization',
+    'how_to_create_employee'=>'How to create an employee',
+    'how_to_manager_department'=>'How to add a manager of department',
+    'how_to_type_meeting'=>'How to create type of meeting',
+    'how_to_pay'=>'How to pay your invoice',
     'attachment' => 'Attachment',
     'image'=>'Image',
     'after_creating_employee'=>'After creating the employee, the credentials for this employee is his email address.',

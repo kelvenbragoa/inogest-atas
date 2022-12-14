@@ -10,44 +10,21 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
+                
+               
+                <video controls>
+                    <source src="/storage/video/payment.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
+                    <h5 class="card-title mb-0">{{__('text.how_to_pay')}}</h5>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
-                </div>
+               
             </div>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
-                </div>
-            </div>
-        </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card">
-                
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
-                </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
-                </div>
-            </div>
-        </div>
     </div>
 
     <hr>
@@ -57,42 +34,68 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
+                
+               
+                <video controls>
+                    <source src="/storage/video/create_department.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
+                    <h5 class="card-title mb-0">{{__('text.how_to_create_department')}}</h5>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
-                </div>
+               
             </div>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
+                
+               
+                <video controls>
+                    <source src="/storage/video/create_employee.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
+                    <h5 class="card-title mb-0">{{__('text.how_to_create_employee')}}</h5>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
-                </div>
+               
             </div>
         </div>
 
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
                 
-                <img class="card-img-top" src="{{asset('template/img/photos/unsplash-1.jpg')}}" alt="Unsplash">
+                
+               
+                <video controls>
+                    <source src="/storage/video/manager_department.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Pagamento por Mpesa</h5>
+                    <h5 class="card-title mb-0">{{__('text.how_to_manager_department')}}</h5>
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Para efetuar o pagamento por Mpesa é necessário ter um número registrado pela Vodacom. No menu de inserção digita o seu número e será pedido para inserir o pin no seu telemóvel.</p>
-                   
+               
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+                
+                
+               
+                <video controls>
+                    <source src="/storage/video/payment.mp4" type="video/mp4">
+                    
+                  Your browser does not support the video tag.
+                  </video>
+                <div class="card-header">
+                    <h5 class="card-title mb-0">{{__('text.type_meeting')}}</h5>
                 </div>
+               
             </div>
         </div>
     </div>

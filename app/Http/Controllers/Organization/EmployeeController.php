@@ -118,6 +118,7 @@ class EmployeeController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $employee = Employee::find($id);
+        $this->authorize('vieworganization',$employee);
         $task_done = MeetingTask::where('employee_id',$id)->where('status',1)->get();
         $task_not_done = MeetingTask::where('employee_id',$id)->where('status',0)->get();
 
@@ -135,6 +136,7 @@ class EmployeeController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $employee = Employee::find($id);
+        $this->authorize('vieworganization',$employee);
         $departments = Department::where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
         return view('organization.employee.edit', compact('employee','departments'));
     }

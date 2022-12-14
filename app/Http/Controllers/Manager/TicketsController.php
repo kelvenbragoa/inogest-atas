@@ -15,6 +15,12 @@ class TicketsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware('auth');
+        $this->middleware('manager');
+        
+    }
+
     public function index()
     {
         //
@@ -69,6 +75,7 @@ class TicketsController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $ticket = Ticket::find($id);
+        $this->authorize('view',$ticket);
 
         return view('manager.tickets.show',compact('ticket'));
     }

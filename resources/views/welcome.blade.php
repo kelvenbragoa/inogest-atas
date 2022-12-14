@@ -7,7 +7,7 @@
                     <div class="col-lg-7">
                         <hr class="space-lg" />
                         <h3 class="text-color-2">
-                            InoGest ATAS
+                            InoGest Atas
                         </h3>
                         <ul class="slider" data-options="arrows:false,nav:false,autoplay:3000,controls:out">
                             <li>
@@ -48,7 +48,7 @@
                                 <div class="caption">
                                     <h2 style="text-align: center">ESTRUTURA ORGANIZACIONAL</h2>
                                     <p>
-                                        Organize o InoGest ATAs com a mesma estrutura da sua empresa. Crie seus departamentos, cadastre funcionários e monitore suas ações de forma eficiente.
+                                        Organize o InoGest Atas com a mesma estrutura da sua empresa. Crie seus departamentos, cadastre funcionários e monitore suas ações de forma eficiente.
                                     </p>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <div class="caption">
                                     <h2 style="text-align: center">AÇÕES E ALERTAS</h2>
                                     <p>
-                                        InoGest ATAs, permite um monitoramento dinâmico das decisões tomadas em cada reunião. As decisões transforma-se em ações com datas de execução, os   alertas sistemáticos por email garantem um monitoramento integrado.
+                                        InoGest Atas, permite um monitoramento dinâmico das decisões tomadas em cada reunião. As decisões transforma-se em ações com datas de execução, os   alertas sistemáticos por email garantem um monitoramento integrado.
                                     </p>
                                 </div>
                             </div>
@@ -189,6 +189,7 @@
                                 </div>
                             </div>
                         </div> --}}
+                        
                         <div class="grid-item">
                             <div class="cnt-box cnt-box-info boxed" data-href="#">
                                

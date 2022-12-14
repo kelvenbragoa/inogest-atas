@@ -83,6 +83,7 @@ class DepartmentController extends Controller
         App::setLocale(auth()->user()->lang);
 
         $department = Department::find($id);
+        $this->authorize('view',$department);
 
         return view('organization.department.show', compact('department'));
     }
@@ -99,6 +100,7 @@ class DepartmentController extends Controller
         App::setLocale(auth()->user()->lang);
 
         $department = Department::find($id);
+        $this->authorize('view',$department);
         $employee = Employee::where('department_id',$department->id)->where('organization_id',Auth::user()->organization_id)->orderBy('name','asc')->get();
         return view('organization.department.edit', compact('department','employee'));
     }

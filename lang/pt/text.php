@@ -1,6 +1,11 @@
 <?php
 
 return[
+    'how_to_create_department'=>'Como criar um departamento da sua organização',
+    'how_to_create_employee'=>'Como criar um funcionário',
+    'how_to_manager_department'=>'Como  atribuir o gestor de departamento',
+    'how_to_type_meeting'=>'Como criar tipo de reunião',
+    'how_to_pay'=>'Como pagar a sua fatura',
     'attachment' => 'Anexo',
     'image'=>'Imagem',
     'after_creating_employee'=>'Após a criação do funcionário, as credenciais para este funcionário são o seu endereço de email.',

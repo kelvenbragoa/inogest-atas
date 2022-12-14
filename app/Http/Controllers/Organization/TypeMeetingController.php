@@ -78,6 +78,7 @@ class TypeMeetingController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $type_meeting = TypeMeeting::find($id);
+        $this->authorize('view',$type_meeting);
 
         return view('organization.type_meeting.show', compact('type_meeting'));
     }
@@ -93,6 +94,7 @@ class TypeMeetingController extends Controller
         //
         App::setLocale(auth()->user()->lang);
         $type_meeting = TypeMeeting::find($id);
+        $this->authorize('view',$type_meeting);
        
         return view('organization.type_meeting.edit', compact('type_meeting'));
     }

@@ -70,7 +70,7 @@ class MeetingTaskController extends Controller
 
         if($participant->user_id != null){
             $user = User::where('id',$participant->user_id)->get();
-            $msg = "Foi adicionado uma a seguinte tarefa na reuinião: ".$data['what'];
+            $msg = "Foi adicionado uma tarefa na reunião: ".$data['what'];
             Notification::send($user,new Operation($msg));
         }
 

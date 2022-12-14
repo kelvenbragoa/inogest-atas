@@ -34,6 +34,12 @@ class EmployeePolicy
         return $user->organization_id == $employee->organization_id && $user->department_id == $employee->department_id;
     }
 
+    public function vieworganization(User $user, Employee $employee)
+    {
+        //
+        return $user->organization_id == $employee->organization_id;
+    }
+
     /**
      * Determine whether the user can create models.
      *

@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Meeting;
+use App\Models\Invoice;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class MeetingPolicy
+class InvoicePolicy
 {
     use HandlesAuthorization;
 
@@ -25,24 +25,14 @@ class MeetingPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Meeting  $meeting
+     * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Meeting $meeting)
+    public function view(User $user, Invoice $invoice)
     {
         //
-        return $user->organization_id == $meeting->organization_id && $user->department_id == $meeting->department_id;
-
+        return $user->organization_id == $invoice->organization_id;
     }
-
-    public function vieworganization(User $user, Meeting $meeting)
-    {
-        //
-        return $user->organization_id == $meeting->organization_id;
-
-    }
-
-    
 
     /**
      * Determine whether the user can create models.
@@ -59,10 +49,10 @@ class MeetingPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Meeting  $meeting
+     * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Meeting $meeting)
+    public function update(User $user, Invoice $invoice)
     {
         //
     }
@@ -71,10 +61,10 @@ class MeetingPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Meeting  $meeting
+     * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Meeting $meeting)
+    public function delete(User $user, Invoice $invoice)
     {
         //
     }
@@ -83,10 +73,10 @@ class MeetingPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Meeting  $meeting
+     * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Meeting $meeting)
+    public function restore(User $user, Invoice $invoice)
     {
         //
     }
@@ -95,10 +85,10 @@ class MeetingPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Meeting  $meeting
+     * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Meeting $meeting)
+    public function forceDelete(User $user, Invoice $invoice)
     {
         //
     }

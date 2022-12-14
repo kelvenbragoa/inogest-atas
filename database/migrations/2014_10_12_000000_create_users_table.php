@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('mobile');
+            $table->string('lang');
             $table->bigInteger('role_id');
             $table->bigInteger('organization_id')->nullable();
             $table->bigInteger('department_id')->nullable();

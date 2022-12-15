@@ -34,6 +34,7 @@
                 <div class="card-header">
                     <h5 class="card-title">{{__('text.meeting_minutes')}}</h5>
                     <a target="_blank" href="{{URL::to('/organization-download-ata/'.$meeting->id)}}" class="btn btn-pill btn-primary"><i class="far fa-arrow-down"></i>Baixar</a>
+                    
                     {{-- <a  class="btn btn-pill btn-secondary"><i class="far fa-file"></i>Enviar Email a todos(Indisponivel)</a> --}}
 
                 </div>

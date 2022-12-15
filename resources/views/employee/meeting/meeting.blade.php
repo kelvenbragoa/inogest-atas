@@ -61,7 +61,7 @@
 <body>
 
 <div class="information" style="background-color: #fff;">
-    <img src="storage/{{$meeting->organization->image ?? 'sys/logoinogestt.png'}}" alt="Logo" width="120" class="logo"/>
+    <img src="/storage/{{$meeting->organization->image ?? 'sys/logoinogestt.png'}}" alt="Logo" width="120" class="logo"/>
      <h3>Cornelder de Moçambique</h3>
      <p>Data: {{$meeting->created_at->format('d-m-Y')}}</p>
    

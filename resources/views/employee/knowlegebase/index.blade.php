@@ -88,7 +88,7 @@
                 
                
                 <video controls>
-                    <source src="/storage/video/payment.mp4" type="video/mp4">
+                    <source src="/storage/video/type_meeting.mp4" type="video/mp4">
                     
                   Your browser does not support the video tag.
                   </video>

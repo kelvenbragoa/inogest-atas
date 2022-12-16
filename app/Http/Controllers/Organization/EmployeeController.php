@@ -154,6 +154,15 @@ class EmployeeController extends Controller
         $data = $request->all();
         $employee = Employee::find($id);
 
+        $user = User::where('employee_id',$id)->first();
+
+        $user->update([
+            'name'=> $data['name'],
+            'email'=> $data['email'],
+            'mobile'=> $data['mobile'],
+            'department_id'=>$data['department_id']
+        ]);
+
         $employee->update($data);
         return redirect()->route('employee.index')->with('messageSuccess', 'Funcionário editado com sucesso');
 

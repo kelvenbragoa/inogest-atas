@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label class="form-label" for="inputEmail4">{{__('text.email')}}</label>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="{{__('text.email')}}" value="{{ $employee->email }}" required>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="{{__('text.email')}}" value="{{ $employee->email }}" required readonly>
                             </div>
                             
                         </div>

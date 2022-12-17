@@ -18,5 +18,17 @@ class Employee extends Model
         return $this->hasMany('App\Models\MeetingParticipant', 'employee_id', 'id');
     }
 
+    public function meeting_tasks(){
+        return $this->hasMany('App\Models\MeetingTask','employee_id','id');
+    }
+
+    public function task_done(){
+        return $this->hasMany('App\Models\MeetingTask', 'employee_id', 'id')->where('status',1);
+    }
+
+    public function task_not_done(){
+        return $this->hasMany('App\Models\MeetingTask', 'employee_id', 'id')->where('status',0);
+    }
+
   
 }

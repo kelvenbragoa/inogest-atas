@@ -129,6 +129,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($department->task_done->count() + $department->task_not_done->count() == 0) 0% @else {{number_format($department->task_done->count()*100/($department->task_done->count() + $department->task_not_done->count()),2)}}% @endif" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">@if ($department->task_done->count() + $department->task_not_done->count() == 0) 0% @else {{number_format($department->task_done->count()*100/($department->task_done->count() + $department->task_not_done->count()),2)}}% @endif {{__('text.completed_tasks')}}</div>
+                                    </div>
                                     
                                     
                                    

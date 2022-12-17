@@ -7,6 +7,7 @@ use App\Models\Employee;
 use App\Models\Invoice;
 use App\Models\Meeting;
 use App\Models\MeetingTask;
+use App\Models\Organization;
 use App\Models\Ticket;
 use App\Models\TypeMeeting;
 use Illuminate\Http\Request;
@@ -52,6 +53,7 @@ class HomeController extends Controller
             $tickets = Ticket::where('user_id',Auth::user()->id)->where('status',1)->get();
             $invoice = Invoice::where('organization_id',Auth::user()->organization_id)->where('status',0)->get();
             $tasks = MeetingTask::where('organization_id',Auth::user()->organization_id)->orderBy('id','desc')->limit(10)->get();
+            $organization = Organization::find(Auth::user()->organization_id);
             $data_bar = [];
             $task_done = [];
             $task_not_done = [];
@@ -77,7 +79,7 @@ class HomeController extends Controller
 
             
         
-            return view('organization.index',compact('departments','employees','type_meetings','meetings','data_bar','task_done','task_not_done','data_meeting','data_meeting_count','tasks','invoice','tickets'));
+            return view('organization.index',compact('departments','employees','type_meetings','meetings','data_bar','task_done','task_not_done','data_meeting','data_meeting_count','tasks','invoice','tickets','organization'));
         }
 
         if(Auth::user()->role_id == 3){

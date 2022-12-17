@@ -32,6 +32,10 @@
 $(document).ready( function () {
     $('#myTable2').DataTable();
 } );
+
+$(document).ready( function () {
+    $('#myTable3').DataTable();
+} );
 </script>
 <script src="{{asset('template/js/app.js')}}"></script>
 

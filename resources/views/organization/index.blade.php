@@ -137,6 +137,69 @@
     </div>
 
     <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h5 class="card-title mb-4">{{__('text.completed_tasks')}}</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <h1 class="mt-1 mb-3">{{$organization->task_done->count()}}</h1>
+                                </div>
+                                <div class="col">
+                                    <i class="align-middle" data-feather="target" style="width: 50px;  height: 50px; color:green"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <h5 class="card-title mb-4">{{__('text.not_completed_tasks')}}</h5>
+                            <div class="row">
+                                <div class="col">
+                                    <h1 class="mt-1 mb-3">{{$organization->task_not_done->count()}}</h1>
+                                </div>
+                                <div class="col">
+                                    <i class="align-middle" data-feather="target" style="width: 50px;  height: 50px; color:red" ></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>{{__('text.total')}} : {{$organization->task_done->count() + $organization->task_not_done->count()}} {{__('text.tasks')}}</p>
+                    </div>
+                    
+                    
+                   
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-sm-9">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">{{__('text.tasks')}}</h5>
+                    <div class="row">
+                        <div class="progress mb-3">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($organization->task_done->count() + $organization->task_not_done->count() == 0) 0% @else {{number_format($organization->task_done->count()*100/($organization->task_done->count() + $organization->task_not_done->count()),2)}}% @endif" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">@if ($organization->task_done->count() + $organization->task_not_done->count() == 0) 0% @else {{number_format($organization->task_done->count()*100/($organization->task_done->count() + $organization->task_not_done->count()),2)}}% @endif {{__('text.completed_tasks')}}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>{{__('text.total')}} : {{$organization->task_done->count() + $organization->task_not_done->count()}} {{__('text.tasks')}}</p>
+
+                        
+                     
+                    </div>
+                    
+                    
+                   
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-12 col-lg-12 col-xxl-12 d-flex">
             <div class="card flex-fill">
                 <div class="card-header">

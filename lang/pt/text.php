@@ -8,6 +8,7 @@ return[
     'how_to_pay'=>'Como pagar a sua fatura',
     'attachment' => 'Anexo',
     'image'=>'Imagem',
+    'id'=>'ID',
     'after_creating_employee'=>'Após a criação do funcionário, as credenciais para este funcionário são o seu endereço de email.',
     'how_to_manager_department'=>'Para adicionar o gestor de departamento para um departamento, edite o departamente e selecione o funcionário que deseja.',
     'payment_gateway'=>'Taxa do gateway do pagamento(Mpesa)',

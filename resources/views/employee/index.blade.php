@@ -124,6 +124,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">{{__('text.tasks')}}</h5>
+                                <div class="row">
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($employee->task_done->count() + $employee->task_not_done->count() == 0) 0% @else {{number_format($employee->task_done->count()*100/($employee->task_done->count() + $employee->task_not_done->count()),2)}}% @endif" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">@if ($employee->task_done->count() + $employee->task_not_done->count() == 0) 0% @else {{number_format($employee->task_done->count()*100/($employee->task_done->count() + $employee->task_not_done->count()),2)}}% @endif {{__('text.completed_tasks')}}</div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
 
 

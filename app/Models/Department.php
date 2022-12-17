@@ -30,4 +30,8 @@ class Department extends Model
     public function task_not_done(){
         return $this->hasMany('App\Models\MeetingTask', 'department_id', 'id')->where('status',0);
     }
+
+    public function meeting_tasks(){
+        return $this->hasMany('App\Models\MeetingTask','department_id','id');
+    }
 }

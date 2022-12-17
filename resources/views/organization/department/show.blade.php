@@ -82,6 +82,21 @@
                                 </div>
                                 
                             </div>
+
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4">{{__('text.tasks')}}</h5>
+                                        <div class="row">
+                                            <div class="progress mb-3">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: @if ($department->task_done->count() + $department->task_not_done->count() == 0) 0% @else {{number_format($department->task_done->count()*100/($department->task_done->count() + $department->task_not_done->count()),2)}}% @endif" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">@if ($department->task_done->count() + $department->task_not_done->count() == 0) 0% @else {{number_format($department->task_done->count()*100/($department->task_done->count() + $department->task_not_done->count()),2)}}% @endif {{__('text.completed_tasks')}}</div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -185,6 +200,59 @@
                                 </tbody>
                             </table>
                             </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h1 class="h3 mb-3">{{__('text.tasks')}}</h1>
+                <div class="card">
+                   
+                    <div class="card-body h-100">
+                       
+                        <div class="row">
+                            <div class="col-xl-12 col-xxl-12 d-flex">
+                                <div class="w-100">
+                                   <div class="table-responsive">
+                                        <table id="myTable3" class="table display" >
+                                            <thead>
+                                                <tr>
+                                                    
+                                                    <th style="width:20%">{{__('text.meeting')}} {{__('text.id')}}</th>
+                                                    <th style="width:20%">{{__('text.when')}}</th>
+                                                    <th style="width:20%">{{__('text.what')}}</th>
+                                                    <th style="width:20%">{{__('text.status')}}</th>
+                                                    <th style="width:20%">{{__('text.date')}}</th>
+                                                    <th>{{__('text.action')}}</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($department->meeting_tasks as $item)
+                                                    <tr>
+                                                        
+                                                        <td>A-{{$item->meeting_id}}</td>
+                                                        <td>{{$item->when}}</td>
+                                                        <td>{{$item->what}}</td>
+                                                        <td>@if ($item->status == 1) <span class="badge bg-success">{{__('text.done')}}</span> @else <span class="badge bg-danger">{{__('text.pending')}}</span> @endif</td>
+                                                        <td>{{$item->created_at->format('d-m-Y')}}</td>
+                                                        
+                                                      
+                    
+                                                        <td class="table-action">
+                                                            
+                                                            <a href="{{URL::to('/meeting/'.$item->meeting_id)}}"><i class="align-middle" data-feather="eye"></i></a>
+                                                           
+                                                        </td> 
+                                                    </tr>
+                                                   
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                        </div> 
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
         </div>

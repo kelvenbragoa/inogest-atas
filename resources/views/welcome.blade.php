@@ -92,7 +92,7 @@
                     <div class="col-lg-6">
                         <ul class="slider" data-options="arrows:true,nav:false">
                             <li>
-                                <a class="img-box img-box-caption btn-video lightbox" href="https://www.youtube.com/watch?v=sVkC4Py3dPg" data-lightbox-anima="fade-top">
+                                <a class="img-box img-box-caption btn-video lightbox" href="https://www.youtube.com/watch?v=2mFu8ltLEVQ" data-lightbox-anima="fade-top">
                                     <img src="storage/frontend/image2.png" alt="">
                                     <span>InoGest Atas</span>
                                 </a>

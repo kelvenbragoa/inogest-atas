@@ -3,6 +3,7 @@
 
         <section class="section-image section-home-one no-padding-y" >
             <div class="container">
+                @include('cookie-consent::index')
                 <div class="row">
                     <div class="col-lg-7">
                         <hr class="space-lg" />

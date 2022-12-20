@@ -18,8 +18,6 @@
     <link rel="icon" href="storage/img/sys/logoinogesticon.png">
 </head>
 <body>
-  
-
     <div id="preloader"></div>
     <nav class="menu-top-logo menu-fixed" data-menu-anima="fade-in">
         <div class="container">

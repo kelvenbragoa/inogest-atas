@@ -24,7 +24,7 @@
                             </li> --}}
                         </ul>
                         <p>
-                            InoGest Atas a plataforma que aumenta a produtividade da sua gestão.
+                            InoGest Atas, a plataforma que aumenta a produtividade da sua gestão.
 .
                         </p>
                         <hr class="space-sm" />

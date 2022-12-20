@@ -16,7 +16,7 @@
                 <ul class="icon-list icon-line">
                     <li><a href="/">Inicio</a></li>
                     <li><a href="{{route('contacts')}}">Contactos</a></li>
-                    <li><a href="{{route('faq')}}">FAQ</a></li>
+                    {{-- <li><a href="{{route('faq')}}">FAQ</a></li> --}}
                     <li><a href="{{route('login')}}">Login</a></li>
                     
                 </ul>

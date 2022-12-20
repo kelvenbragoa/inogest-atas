@@ -16,13 +16,13 @@
                 <form action="themekit/scripts/contact-form/contact-form.php" class="form-box form-ajax" method="post" data-email="example@domain.com">
                     <div class="row">
                         <div class="col-lg-6">
-                            <input id="name" name="name" placeholder="Name" type="text" class="input-text" required>
+                            <input id="name" name="name" placeholder="Nome" type="text" class="input-text" required>
                         </div>
                         <div class="col-lg-6">
                             <input id="email" name="email" placeholder="Email" type="email" class="input-text" required>
                         </div>
                     </div>
-                    <textarea id="messagge" name="messagge" class="input-textarea" placeholder="Write something ..." required></textarea>
+                    <textarea id="messagge" name="messagge" class="input-textarea" placeholder="Escreve algo ..." required></textarea>
                     <div class="form-checkbox">
                         <input type="checkbox" id="check" name="check" value="check" required>
                         <label for="check">Você aceita os termos de privacidade</label>

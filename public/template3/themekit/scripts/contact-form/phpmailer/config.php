@@ -10,10 +10,10 @@
  */
 
 $smtp_config = array(
-    'host' => '',
-    'username' => '',
-    'password' => '',
+    'host' => 'mail.inovatis.co.mz',
+    'username' => 'inogest@inovatis.co.mz',
+    'password' => 'inovatisinogest2022',
     'port' => '465',
-    'email_from' => ''
+    'email_from' => 'inogest@inovatis.co.mz'
 );
 ?>

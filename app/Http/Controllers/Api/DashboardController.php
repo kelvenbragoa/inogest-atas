@@ -21,6 +21,8 @@ class DashboardController extends Controller
         $total_inactive_organizations = Organization::where('is_active',0)->count();;
         $total_users = User::count();
         $total_invoices = Invoice::count();
+        $total_invoices_paid = Invoice::where('status',1)->count();
+        $total_invoices_not_paid = Invoice::where('status',0)->count();
         $total_transactions = Transaction::count();
         $total_meetings = Meeting::count();
         $total_tickets = Ticket::count();
@@ -34,6 +36,8 @@ class DashboardController extends Controller
             'total_inactive_organizations'=> $total_inactive_organizations,
             'total_users'=> $total_users,
             'total_invoices'=> $total_invoices,
+            'total_invoices_paid'=> $total_invoices_paid,
+            'total_invoices_not_paid'=> $total_invoices_not_paid,
             'total_transactions'=> $total_transactions,
             'total_meetings'=> $total_meetings,
             'total_tickets'=> $total_tickets,

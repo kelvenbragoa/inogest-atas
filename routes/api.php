@@ -19,3 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/dashboard',[\App\Http\Controllers\Api\DashboardController::class,'index']);
+
+Route::get('/invoice',[\App\Http\Controllers\Api\InvoiceController::class,'index']);

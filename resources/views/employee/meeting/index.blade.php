@@ -56,17 +56,17 @@
                                 <tr>
                                     {{-- <td>{{$item->id}}</td> --}}
                                     {{-- <td>A-{{$item->id}}</td> --}}
-                                    <td>{{$item->created_at->format('d-m-Y')}}</td>
-                                    <td>{{$item->type_meeting->name}}</td>
-                                    <td>{{$item->subject}}</td>
-                                    <td>{{$item->participants->count()}}</td>
+                                    <td>{{$item->meeting->created_at->format('d-m-Y')}}</td>
+                                    <td>{{$item->meeting->type_meeting->name}}</td>
+                                    <td>{{$item->meeting->subject}}</td>
+                                    <td>{{$item->meeting->participants->count()}}</td>
                                    
                                     
                                   
 
                                     <td class="table-action">
                                         {{-- <a href="{{URL::to('/employee-meeting/'.$item->id.'/edit')}}"><i class="align-middle" data-feather="edit-2"></i></a> --}}
-                                        <a href="{{URL::to('/employee-meeting/'.$item->id)}}"><i class="align-middle" data-feather="eye"></i></a>
+                                        <a href="{{URL::to('/employee-meeting/'.$item->meeting->id)}}"><i class="align-middle" data-feather="eye"></i></a>
                                         {{-- <a href="" data-toggle="modal" data-target="#exampleModalCenter{{$item->id}}"><i class="align-middle" data-feather="trash"></i></a> --}}
                                     </td> 
                                 </tr>

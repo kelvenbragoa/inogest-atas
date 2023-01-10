@@ -24,7 +24,9 @@ class MeetingController extends Controller
     {
         //
         App::setLocale(auth()->user()->lang);
-        $meetings = Meeting::orderBy('id','desc')->orWhere('department_id',Auth::user()->department_id)->get();
+        //$meetings = Meeting::orderBy('id','desc')->orWhere('department_id',Auth::user()->department_id)->get();
+
+        $meetings = MeetingParticipant::where('user_id',Auth::user()->id)->where('department_id',Auth::user()->department_id)->get();
         return view('employee.meeting.index',compact('meetings'));
 
     }

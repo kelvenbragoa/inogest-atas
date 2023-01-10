@@ -64,13 +64,11 @@
     <img src="https://inogest-atas.inovatis.co.mz/storage/{{$meeting->organization->image ?? 'sys/logoinogestt.png'}}" alt="Logo" width="120" class="logo"/>
      <h3>{{$meeting->organization->name}}</h3>
      <p>Data: {{$meeting->created_at->format('d-m-Y')}}</p>
-   
+     <p>Tipo de Reunião: {{$meeting->type_meeting->name}}</p>
 </div>
 
 
 <br/>
-
-
 
 <div class="invoice">
     <h3 style="text-align: center">ACTA DA REUNIÃO</h3>

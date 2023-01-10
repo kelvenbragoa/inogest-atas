@@ -42,11 +42,13 @@
                         <thead>
                             <tr>
                                 {{-- <th style="width:10%;">{{__('text.id')}}</th> --}}
-                                <th style="width:20%">ID {{__('text.meeting')}}</th>
+                                {{-- <th style="width:20%">ID {{__('text.meeting')}}</th> --}}
+                                <th style="width:20%">{{__('text.date')}}</th>
+                                <th style="width:20%">{{__('text.type_meeting')}}</th>
                                 <th style="width:20%">{{__('text.subject')}}</th>
                                 <th style="width:20%">{{__('text.participants')}}</th>
                                 <th style="width:20%">{{__('text.department')}}</th>
-                                <th style="width:20%">{{__('text.date')}}</th>
+                               
                                 <th>{{__('text.action')}}</th>
                             </tr>
                         </thead>
@@ -54,11 +56,13 @@
                             @foreach ($meeting_other as $item)
                                 <tr>
                                     {{-- <td>{{$item->id}}</td> --}}
-                                    <td>A-{{$item->meeting->id}}</td>
+                                    {{-- <td>A-{{$item->meeting->id}}</td> --}}
+                                    <td>{{$item->meeting->created_at->format('d-m-Y')}}</td>
+                                    <td>{{$item->type_meeting->name}}</td>
                                     <td>{{$item->meeting->subject}}</td>
                                     <td>{{$item->meeting->participants->count()}}</td>
                                     <td>{{$item->meeting->department->name}}</td>
-                                    <td>{{$item->meeting->created_at->format('d-m-Y')}}</td>
+                                    
                                     
                                   
 

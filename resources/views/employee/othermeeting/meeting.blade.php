@@ -61,9 +61,10 @@
 <body>
 
 <div class="information" style="background-color: #fff;">
-    <img src="http://inosecure.inovatis.co.mz/storage/sys/cdm.png" alt="Logo" width="120" class="logo"/>
+    <img src="https://inogest-atas.inovatis.co.mz/storage/{{$meeting->organization->image ?? 'sys/logoinogestt.png'}}" alt="Logo" width="120" class="logo"/>
      <h3>Cornelder de Moçambique</h3>
      <p>Data: {{$meeting->created_at->format('d-m-Y')}}</p>
+     <p>Tipo de Reunião: {{$meeting->type_meeting->name}}</p>
    
 </div>
 

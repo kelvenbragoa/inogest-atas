@@ -15,4 +15,6 @@ class InvoiceController extends Controller
             'invoice'=>  Invoice::with('organization:id,name,email,is_active')->with('transaction:id,reference,amount,invoice_id,method,created_at')->orderBy('id','desc')->get()
         ],200);
     }
+    
+
 }
